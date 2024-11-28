@@ -1,65 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust Bank</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-    <header>
-        <h1 class="text-base md:text-3xl text-center my-2">Edge <span class="text-red-500 font-medium">Trust Bank</span>
-        </h1>
-    </header>
-    <main>
-        <!-- balance and transaction summary -->
-        <hr class="h-2">
-        <section class="my-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-3/4 mx-auto text-white">
-                <div class="bg-yellow-400 p-8 rounded-lg">
-                    <h4 class="text-3xl">Deposit</h4>
-                    <h2 class="text-5xl font-medium">$<span id="deposit-total">00</span></h2>
-                </div>
-                <div class="bg-red-400 p-8 rounded-lg">
-                    <h4 class="text-3xl">Withdraw</h4>
-                    <h2 class="text-5xl font-medium">$<span id="withdraw-total">00</span></h2>
-                </div>
-                <div class="bg-blue-400 md:col-span-2 xl:col-span-1 p-8 rounded-lg">
-                    <h4 class="text-3xl">Balance</h4>
-                    <h2 class="text-5xl font-medium">$<span id="balance-total">1240</span></h2>
-                </div>
-            </div>
-        </section>
-        <!-- deposit and Withdraw section -->
-        <hr class="h-1 bg-blue-400">
-        <section class="mt-8 w-3/4 mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <div class="bg-violet-400 p-8 rounded-lg">
-                    <h3 class="text-4xl text-white mb-4">Your Deposit</h3>
-                    <input id="deposit-field"
-                        class="w-3/4 px-4 py-3 rounded block" type="number" placeholder="$ Amount  you want to deposit"
-                        min="1">
-                    <button id="btn-deposit"
-                        class="px-6 py-2 text-white rounded-lg mt-4 font-medium bg-blue-400">Deposit</button>
-                </div>
-                <div class="bg-amber-400 p-8 rounded-lg">
-                    <h3 class="text-4xl text-white mb-4">Your Withdraw</h3>
-                    <input id="withdraw-field"
-                        class="w-3/4 px-4 py-3 rounded block" type="number" placeholder="$ Amount  you want to withdraw"
-                        min="1">
-                    <button id="btn-withdraw"
-                        class="px-6 py-2 text-white rounded-lg mt-4 font-medium bg-blue-400">Withdraw</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
+    <div class= "mx-20 h-[100vh] flex flex-col justify-center items-center">
+        <h1 class=" text-center text-4xl font-bold">Welcome to <span class="text-blue-900">Trust Bank</span></h1>
+        <div class="mt-5 p-10  bg-blue-200 flex flex-col items-center justify-center gap-5 rounded-xl">
+            <label class="font-semibold text-xl" for="">Email <span class="ml-8">:</span>
+                <input id="email" placeholder="Your Email Address" class="rounded-xl p-2 outline-none" type="email" required size="30px"/>
+            </label>
+            <label class="font-semibold text-xl">Password<span class="ml-1">:</span>
+                <input id="password" placeholder="Your Password" class="rounded-xl p-2 outline-none" type="password" required  size="30px"/>
+            </label>
+            <button class="px-6 rounded-xl py-2 bg-orange-500 text-white" id="login-button">Submit</button>
+        </div>
+    </div> 
 
     <script src="./script.js"></script>
 </body>
-
 </html>
